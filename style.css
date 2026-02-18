@@ -699,6 +699,16 @@ html, body {
   .card-price-n { font-size: 0.82rem; }
   .card-price-t { font-size: 8.5px; }
 
+  /* Compact cards on mobile */
+  .card          { padding: 0.75rem; }
+  .card-icon     { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .card-title    { font-size: 0.78rem; }
+  .card-body     { font-size: 0.7rem; }
+  .feature-list  { margin-top: 0.4rem; gap: 2px; }
+  .feature-list li { font-size: 0.65rem; }
+  .card-price    { margin-top: 0.5rem; padding-top: 0.5rem; }
+  .cards-grid    { gap: 8px; }
+
   /* Eyebrow */
   .eyebrow { font-size: 9.5px; padding: 4px 11px; margin-bottom: 0.85rem; }
 }
