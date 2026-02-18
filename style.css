@@ -492,43 +492,6 @@ html, body {
 .process-when  { display: inline-block; margin-top: 0.65rem; font-size: 9px; font-weight: 500; color: rgba(255, 255, 255, 0.30); padding: 3px 9px; border-radius: 20px; background: var(--w06); border: 1px solid var(--border); }
 
 /* ─────────────────────────────────────────────────────────────
-   TEAM
-   ───────────────────────────────────────────────────────────── */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 10px;
-  width: 100%;
-  max-width: 880px;
-}
-.team-card {
-  padding: 1.1rem 1rem;
-  border-radius: 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  text-align: center;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  transition: all 0.2s var(--ea);
-}
-.team-card:hover { background: var(--surface-h); transform: translateY(-2px); }
-.team-av {
-  width: 40px;
-  height: 40px;
-  border-radius: 11px;
-  background: var(--w08);
-  border: 1px solid var(--border);
-  margin: 0 auto 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--w60);
-}
-.team-role { font-size: 8.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--w35); margin-bottom: 2px; }
-.team-name { font-size: 12px; font-weight: 600; }
-
-/* ─────────────────────────────────────────────────────────────
    PRICING LIST
    ───────────────────────────────────────────────────────────── */
 .price-list {
