@@ -468,46 +468,6 @@ html, body {
 .cx { color: rgba(255, 255, 255, 0.18); font-size: 13px; } /* dash */
 
 /* ─────────────────────────────────────────────────────────────
-   CASE STUDIES
-   ───────────────────────────────────────────────────────────── */
-.cs-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-  max-width: 1080px;
-  text-align: left;
-}
-.cs-card {
-  border-radius: 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  transition: all 0.25s var(--ea);
-}
-.cs-card:hover { background: var(--surface-h); transform: translateY(-3px); }
-.cs-thumb {
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--border);
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: rgba(255, 255, 255, 0.06);
-}
-.cs-body    { padding: 1rem; }
-.cs-tags    { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 0.6rem; }
-.cs-tag     { font-size: 8px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 7px; border-radius: 20px; background: var(--w06); border: 1px solid var(--border); color: var(--w50); }
-.cs-client  { font-size: 9px; font-weight: 500; color: var(--w35); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
-.cs-title   { font-size: clamp(0.72rem, 1.1vw, 0.82rem); font-weight: 600; letter-spacing: -0.01em; margin-bottom: 0.5rem; line-height: 1.35; }
-.cs-metrics { display: flex; gap: 0.85rem; padding-top: 0.65rem; border-top: 1px solid var(--w06); }
-.cs-m-n     { font-size: clamp(0.9rem, 1.6vw, 1.1rem); font-weight: 700; letter-spacing: -0.03em; }
-.cs-m-l     { font-size: 8px; font-weight: 500; color: var(--w35); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
-
-/* ─────────────────────────────────────────────────────────────
    PROCESS GRID
    ───────────────────────────────────────────────────────────── */
 .process-grid {
@@ -736,7 +696,6 @@ html, body {
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .process-grid { grid-template-columns: 1fr 1fr; }
-  .cs-grid      { grid-template-columns: 1fr 1fr; }
   .price-list   { grid-template-columns: 1fr; }
   .cards-grid-3 { grid-template-columns: repeat(2, 1fr); }
 }
@@ -752,9 +711,7 @@ html, body {
   /* All grids collapse */
   .cards-grid-3, .cards-grid-2 { grid-template-columns: 1fr; }
   .process-grid                 { grid-template-columns: 1fr; }
-  .cs-grid                      { grid-template-columns: 1fr; max-height: 58vh; overflow-y: auto; }
   .price-list                   { grid-template-columns: 1fr; }
-  .team-grid                    { grid-template-columns: repeat(2, 1fr); }
   .obj-row                      { grid-template-columns: 1fr; gap: 0.35rem; padding: 11px 14px; }
 
   /* Nav */
