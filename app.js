@@ -77,11 +77,15 @@
     /* Animate out current slide */
     var leaving = slides[current];
     leaving.classList.remove('active');
-    leaving.classList.add(fwd ? 'exit-up' : 'exit-down');
+    leaving.classList.add(fwd ? 'exit-left' : 'exit-right');
+
+    /* Reset scroll position of target slide */
+    var scrollArea = slides[idx].querySelector('.slide-scroll');
+    if (scrollArea) scrollArea.scrollTop = 0;
 
     /* Animate in next slide */
     var entering = slides[idx];
-    entering.style.transform = fwd ? 'translateY(20px)' : 'translateY(-20px)';
+    entering.style.transform = fwd ? 'translateX(20px)' : 'translateX(-20px)';
     entering.style.opacity   = '0';
     entering.classList.add('active');
 
@@ -95,7 +99,7 @@
 
     /* Cleanup after transition */
     setTimeout(function () {
-      leaving.classList.remove('exit-up', 'exit-down');
+      leaving.classList.remove('exit-left', 'exit-right');
       isAnimating = false;
     }, TRANSITION_MS);
 
@@ -172,7 +176,7 @@
   });
 
   /* ─────────────────────────────────────────────────────────────
-     TOUCH / SWIPE (vertical swipe = next/prev)
+     TOUCH / SWIPE (horizontal swipe = next/prev)
      ───────────────────────────────────────────────────────────── */
   var touchStartX = 0;
   var touchStartY = 0;
@@ -185,8 +189,8 @@
   document.addEventListener('touchend', function (e) {
     var dx = e.changedTouches[0].clientX - touchStartX;
     var dy = e.changedTouches[0].clientY - touchStartY;
-    if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > SWIPE_MIN) {
-      if (dy < 0) next(); else prev();
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > SWIPE_MIN) {
+      if (dx < 0) next(); else prev();
     }
   }, { passive: true });
 
