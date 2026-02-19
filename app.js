@@ -209,7 +209,12 @@
   /* ─────────────────────────────────────────────────────────────
      INIT
      ───────────────────────────────────────────────────────────── */
-  slides[0].classList.add('active');
+  /* Support hash-based deep linking: index.html#slide-4 */
+  var hashMatch = window.location.hash.match(/^#slide-(\d+)$/);
+  var startSlide = hashMatch ? Math.min(parseInt(hashMatch[1], 10), TOTAL - 1) : 0;
+
+  slides[startSlide].classList.add('active');
+  current = startSlide;
   updateUI();
 
   /* ─────────────────────────────────────────────────────────────
