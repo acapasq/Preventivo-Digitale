@@ -838,10 +838,17 @@ html, body {
    ═══════════════════════════════════════════════════════════════ */
 
 /* Reset overflow for detail pages */
+html:has(body.detail-page),
+html:has(body.detail-page) body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+}
 body.detail-page {
   overflow-y: auto;
   overflow-x: hidden;
   height: auto;
+  user-select: text;
 }
 
 /* Detail header — fixed back nav */
