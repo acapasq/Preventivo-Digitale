@@ -23,7 +23,6 @@
   var menuOverlay = document.getElementById('menu-overlay');
   var menuClose   = document.getElementById('menu-close-btn');
   var menuList    = document.getElementById('menu-list');
-  var slideLabel  = document.getElementById('slide-label');
   var currN       = document.getElementById('curr-n');
   var totalN      = document.getElementById('total-n');
   var dotNav      = document.getElementById('dot-nav');
@@ -120,9 +119,8 @@
     dots.forEach(function  (d, i) { d.classList.toggle('active',  i === current); });
     items.forEach(function (m, i) { m.classList.toggle('current', i === current); });
 
-    currN.textContent      = current + 1;
-    slideLabel.textContent = slides[current].dataset.label || '';
-    btnPrev.disabled       = current === 0;
+    currN.textContent = current + 1;
+    btnPrev.disabled  = current === 0;
     btnNext.disabled       = current === TOTAL - 1;
   }
 

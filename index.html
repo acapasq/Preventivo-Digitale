@@ -20,10 +20,24 @@
 <div class="noise" aria-hidden="true"></div>
 
 <!-- ═══════════════════════════════════════════
-     TOP BAR — logo · dot nav · counter
+     TOP BAR — controls · dot nav · counter
      ═══════════════════════════════════════════ -->
-<div id="topbar">
-  <div class="topbar-logo">Serendip <span>Studio</span></div>
+<div id="topbar" role="navigation" aria-label="Controlli presentazione">
+  <div class="topbar-left">
+    <button class="nav-btn" id="btn-prev" aria-label="Slide precedente" disabled>
+      <svg viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="nav-btn" id="btn-next" aria-label="Slide successiva">
+      <svg viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="nav-btn" id="menu-btn" aria-label="Apri indice slide" aria-haspopup="true">
+      <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
+        <circle cx="8" cy="3"  r="1.2" fill="currentColor"/>
+        <circle cx="8" cy="8"  r="1.2" fill="currentColor"/>
+        <circle cx="8" cy="13" r="1.2" fill="currentColor"/>
+      </svg>
+    </button>
+  </div>
   <div id="dot-nav" role="tablist" aria-label="Navigazione slide"></div>
   <div class="topbar-counter">
     <span id="curr-n">1</span> / <span id="total-n">1</span>
@@ -752,29 +766,6 @@
 
 </div><!-- /slides -->
 </div><!-- /presentation -->
-
-<!-- ═══════════════════════════════════════════
-     BOTTOM NAVIGATION BAR
-     ═══════════════════════════════════════════ -->
-<div id="bottom-nav" role="navigation" aria-label="Controlli presentazione">
-  <button class="nav-btn" id="btn-prev" aria-label="Slide precedente" disabled>
-    <svg viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="nav-divider" aria-hidden="true"></div>
-  <span id="slide-label" aria-live="polite"></span>
-  <div class="nav-divider" aria-hidden="true"></div>
-  <button class="nav-btn" id="btn-next" aria-label="Slide successiva">
-    <svg viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="nav-divider" aria-hidden="true"></div>
-  <button class="nav-btn" id="menu-btn" aria-label="Apri indice slide" aria-haspopup="true">
-    <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
-      <circle cx="8" cy="3"  r="1.2" fill="currentColor"/>
-      <circle cx="8" cy="8"  r="1.2" fill="currentColor"/>
-      <circle cx="8" cy="13" r="1.2" fill="currentColor"/>
-    </svg>
-  </button>
-</div>
 
 <!-- ═══════════════════════════════════════════
      MENU OVERLAY — slide index
